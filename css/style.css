@@ -1,0 +1,272 @@
+﻿body{
+     margin: 0;
+     padding: 0;
+     background-color: #e3e3e3;
+}
+
+.container{
+     margin: auto;
+     max-width: 1020px;
+     width: 75%;
+     padding: 35px;
+     position: relative;
+}
+
+.clearfix{
+     content: "";
+     display: table;
+     clear: both;
+}
+
+header{
+     background-size: cover;
+     position: relative;
+     background-image: url("../img/header.jpg");
+     background-position: 0 -150px;
+     background-attachment: fixed;
+     box-shadow: inset 0 -250px 300px rgba(0,0,0,0.7);
+     z-index: 6;
+}
+
+header .container{
+     height: 100%;
+     padding-bottom: 0;
+}
+
+H1{
+     margin-top: 110px;
+     color: white;
+     font-family: 'Times New Roman', serif;
+     font-weight: bold;
+     line-height: 60px;
+     margin-bottom: 0;
+}
+
+H1 span:first-child {
+     text-transform: uppercase;
+     font-size: 68px;
+}
+
+H1 span:last-child {
+     font-size: 82px;
+}
+
+nav{
+     background-size: cover;
+     position: sticky;
+     top: 0;
+     background-image: url("../img/header.jpg");
+     background-position: 0 -150px;
+     background-attachment: fixed;
+     box-shadow: inset 0 -285px 300px rgba(0,0,0,0.7), 0 0 30px black;
+     z-index: 5;
+}
+
+nav .container{
+     padding: 15px 35px;
+}
+
+nav a{
+     display: inline-block;
+     height: 30px;
+     border: 1px solid white;
+     padding: 10px 20px;
+     color: white;
+     text-decoration: none;
+     font-size: 25px;
+     border-radius: 40px;
+     margin-right: 15px;
+
+     transition-property: all;
+     transition: all ease 0.5s;
+}
+
+nav a:last-child{
+     margin-right: 0;
+}
+
+nav a:hover{
+     transform: scale(1.2);
+     box-shadow: 0 0 20px white;
+}
+
+nav a:active{
+     transform: scale(1.001);
+}
+
+
+section .container{
+     background-color: white;
+}
+
+p {
+     /*font-family: 'Roboto light', sans-serif;*/
+     font-family: 'Times New Roman', serif;
+     font-size: 28px;
+     color: #393939;
+     line-height: 35px;
+     margin: 0 0;
+     margin-bottom: 20px;
+     position: relative;
+}
+
+img{
+     height: 500px;
+     clear: both;
+     display: inline-block;
+     margin: 10px 0;
+}
+
+.right-img{
+     position: relative;
+     float: right;
+     left: 35px;
+     right: 0;
+     top: 0;
+     background: linear-gradient(to right, white, #e3e3e3);
+     z-index: 4;
+
+     animation-name: slideOutRight;
+     animation-duration: 1.5s;
+     animation-timing-function: ease;
+
+     transition-property: all;
+     transition: all ease 1s;
+}
+
+.left-img{
+     float: left;
+     position: relative;
+     right: 35px;
+     background: linear-gradient(to right, #e3e3e3, white);
+     z-index: 4;
+
+     animation-name: slideOutLeft;
+     animation-duration: 1.5s;
+     animation-timing-function: ease;
+
+     transition-property: all;
+     transition: all ease 1s;
+}
+
+@keyframes slideOutRight {
+     from{opacity: 0; position: relative; left: 100%;}
+     to{opacity: 1;}
+}
+
+@keyframes slideOutLeft {
+     from{opacity: 0; position: relative; right: 100%;}
+     to{opacity: 1;}
+}
+
+q{
+     font-size: 28px;
+     margin: 15px 0;
+     padding: 20px 30px;
+     font-style: italic;
+     color: #4b4b4b;
+     display: block;
+}
+
+.left-quote{
+     border-left: 5px solid #e3e3e3;
+     background: linear-gradient(to right, #f7f7f7, white);
+}
+
+.right-quote{
+     border-right: 5px solid #e3e3e3;
+     background: linear-gradient(to left, #f7f7f7, white);
+}
+
+.image{
+     background-image: url("../img/footer.jpg");
+     background-position: bottom;
+     background-size: cover;
+     background-attachment: fixed;
+     margin: 35px 0;
+     height: 600px;
+     width: 100%;
+     position: relative;
+     right: 35px;
+     display: block;
+     clear: both;
+     padding: 0 35px;
+
+     transition-property: all;
+     transition: all ease 1s;
+}
+
+.image:hover, .left-img:hover, .right-img:hover{
+     transform: scale(1.1);
+     box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.image::before{
+     content: "Франц Крюгер. \"Русская гвардия в Царском Селе в 1832 году\", 1841 г.";
+     color: white;
+     font-size: 25px;
+     position: absolute;
+     right: 0;
+     top: 0;
+     padding: 20px;
+     text-shadow: 0 0 15px black;
+}
+
+footer{
+     padding-top: 35px;
+     height: 600px;
+     background-image: url("../img/footer2.jpg");
+     background-size: cover;
+     position: relative;
+     background-position: top;
+     background-attachment: fixed;
+     box-shadow: inset 0 250px 300px rgba(0,0,0,0.7), 0 0 30px black;
+     z-index: 5;
+}
+
+footer p{
+     color: white;
+     border: 1px solid white;
+     display: inline-block;
+     padding: 10px 20px;
+     border-radius: 30px;
+
+     animation-name: light;
+     animation-duration: 3s;
+     animation-timing-function: ease;
+     animation-iteration-count: infinite;
+}
+
+@keyframes light {
+     from{box-shadow: 0 0 0;}
+     50%{box-shadow: 0 0 20px white;}
+     to{box-shadow: 0 0 0;}
+}
+
+.up-arrow{
+     height: 55px;
+     width: 55px;
+     float: right;
+     background-image: url("../img/up-arrow.png");
+     background-size: cover;
+     border-radius: 30px;
+     margin-left: 15px;
+
+     transition-property: all;
+     transition: all ease 0.5s;
+}
+
+.up-arrow:hover{
+     transform: translateY(-20%);
+}
+
+.up-arrow:active{
+     transform: scale(1.001);
+}
+
+.anchor{
+     position: relative;
+     top: -100px;
+     height: 1px;
+     width: 1px;
+}
